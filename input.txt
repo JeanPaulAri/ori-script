@@ -1,0 +1,39 @@
+LOAD project1.mp4
+PLAY
+PAUSE
+GOTO 00:01:30
+PLAY
+STOP
+
+LOAD intro.mp4
+PLAY
+GOTO 00:00:15
+FILTER blur
+SAVE intro_blurred.mp4
+
+LOAD project1.mp4
+GOTO 00:02:45
+SPEED 0.5
+SAVE slow_motion_segment.mp4
+SPEED 1.0
+
+LOAD interview.mp4
+VOLUME 80
+PLAY
+GOTO 00:05:20
+MUTE
+GOTO 00:06:30
+VOLUME 100
+SAVE interview_edited.mp4
+
+LOAD final_project.mp4
+FILTER contrast
+FILTER saturation
+FORMAT mp4
+EXPORT final_video_hd.mp4
+
+LOAD outro.mp4
+PLAY
+STOP
+FORMAT avi
+EXPORT outro_archive.avi
